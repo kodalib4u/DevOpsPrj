@@ -108,7 +108,7 @@ module "sgs" {
     vpc_id     =     aws_vpc.dpp-vpc.id
   }
 
-module "eks" {
+  module "eks" {
       source = "../eks"
        vpc_id     =     aws_vpc.dpp-vpc.id
        subnet_ids = [aws_subnet.dpp-public-subnet-01.id,aws_subnet.dpp-public-subnet-02.id]
